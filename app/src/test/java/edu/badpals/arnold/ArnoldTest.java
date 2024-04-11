@@ -7,7 +7,7 @@ import edu.badpals.arnold.main.ArnoldMain;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class ArnoldTest {
     @Test public void appHasAGreeting() {
         ArnoldMain classUnderTest = new ArnoldMain();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
