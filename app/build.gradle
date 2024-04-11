@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'java'
 }
 
 repositories {
@@ -21,6 +22,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.3'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -33,4 +36,14 @@ java {
 application {
     // Define the main class for the application.
     mainClass = 'org.example.App'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'edu.badpals.arnold.app.Main',
+                'Package-Title' : 'Arnold',
+                'Package-Version': '1.0',
+                'Package-Vendor' : 'davidg@cifpfbmol.eu',
+                'Specification-Title' : 'Examen Arnold'
+    }
 }
