@@ -14,5 +14,9 @@ public class ArnoldMain {
             System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
         }
 
+        System.out.println("\nYour weight only on the terrestrial planets: ");
+        for(Planeta planeta: Planeta.getPlanetasTerrestres()){
+            System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
+        }
     }
 }
