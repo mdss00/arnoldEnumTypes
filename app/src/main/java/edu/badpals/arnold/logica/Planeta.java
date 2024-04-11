@@ -1,5 +1,7 @@
 package edu.badpals.arnold.logica;
 
+import java.util.EnumSet;
+
 public enum Planeta {
     MERCURY (3.303e+23, 2.4397e6),
     VENUS   (4.869e+24, 6.0518e6),
@@ -43,4 +45,9 @@ public enum Planeta {
     public double gravedadSuperficie(Planeta planeta) {
         return G * planeta.getMasa() / Math.pow(planeta.getRadio(), 2);
     }
+
+    public static EnumSet<Planeta> getPlanetasTerrestres() {
+        return EnumSet.range(MERCURY, MARS);
+    }
+
 }
