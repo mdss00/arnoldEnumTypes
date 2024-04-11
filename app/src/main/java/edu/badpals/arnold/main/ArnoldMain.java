@@ -3,12 +3,16 @@
  */
 package edu.badpals.arnold.main;
 
-public class ArnoldMain {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import edu.badpals.arnold.logica.Planeta;
 
+public class ArnoldMain {
     public static void main(String[] args) {
-        System.out.println(new ArnoldMain().getGreeting());
+
+        double peso = 1.0; // kg
+
+        for(Planeta planeta : Planeta.values()){
+            System.out.printf("Your weight on %s is %f N%n", planeta.name(), planeta.pesoSuperficie(peso));
+        }
+
     }
 }
